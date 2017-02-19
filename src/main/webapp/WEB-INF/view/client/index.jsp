@@ -17,8 +17,6 @@
         <n:script type="text/javascript" charset="UTF-8" src="/javascripts/clientList.js"></n:script>
         <!-- Bootstrap Core CSS -->
         <link href="//cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-        <link href="//cdn.jsdelivr.net/bootstrap.material-design/0.5.6/css/bootstrap-material-design.css" rel="stylesheet">
-        <link href="//cdn.jsdelivr.net/bootstrap.material-design/0.5.6/css/ripples.min.css" rel="stylesheet">
         <%-- stylesheet --%>
         <n:link rel="stylesheet" type="text/css" href="/stylesheets/project.css" />
         <n:link rel="stylesheet" type="text/css" href="/stylesheets/common.css" />

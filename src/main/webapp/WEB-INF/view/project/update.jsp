@@ -6,13 +6,45 @@
 <%@ page session="false" %>
 
 <!DOCTYPE html>
-<html>
-    <head>
-        <%-- javascript --%>
-        <n:script type="text/javascript" src="/javascripts/lib/jquery-1.11.2.min.js"></n:script>
-        <n:script type="text/javascript" src="/javascripts/projectInput.js"></n:script>
-        <title>プロジェクト変更画面</title>
-    </head>
+<html lang="ja">
+  <head>
+    <n:include path="/WEB-INF/view/common/head.jsp" />
+    <title>プロジェクト変更画面</title>
+  </head>
+  <body>
+    <n:include path="/WEB-INF/view/common/noscript.jsp" />
+    <div class="container">
+      <n:include path="/WEB-INF/view/common/header.jsp" />
+      <div class="row">
+        <n:include path="/WEB-INF/view/common/sidemenu.jsp" />
+        <div class="pages col-xs-9">
+          <div class="row">
+            <n:form useToken="true">
+              <div class="col-xs-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <p>
+                      <n:forInputPage>
+                        プロジェクト変更画面
+                        <span class="pull-right">
+                          <n:a href="/action/project/show/${form.projectId}" cssClass="btn btn-raised btn-default">戻る</n:a>
+                          <n:submit value="削除" uri="#" id="topDeleteButton" cssClass="btn btn-raised btn-danger" allowDoubleSubmission="false" type="button" />
+                          <n:submit value="更新" uri="#" id="topUpdateButton" cssClass="btn btn-raised btn-success" type="button" />
+                        </span>
+                      </n:forInputPage>
+                      <n:forConfirmationPage>
+                        プロジェクト変更確認画面
+                        <span class="pull-right">
+                          <n:submit value="入力へ戻る" uri="#" id="topBackButton" cssClass="btn btn-raised btn-default" type="button" />
+                          <n:submit value="確定" uri="#" id="topSubmitButton" cssClass="btn btn-raised btn-success" allowDoubleSubmission="false" type="button" />
+                        </span>
+                      </n:forConfirmationPage>
+                    </p>
+                  </div>
+                  <div class="panel-body">
+
+
+
     <body>
         <div class="mainContents">
             <n:include path="/WEB-INF/view/common/menu.jsp" />

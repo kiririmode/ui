@@ -4,7 +4,30 @@
 <%@ taglib prefix="n" uri="http://tis.co.jp/nablarch" %>
 <%@ page session="false" %>
 <n:script type="text/javascript" src="/javascripts/sideMenu.js"></n:script>
-<nav class="col-md-2 menu">
+<nav class="col-xs-3 navbar navbar-default">
+    <div class="panel panel-default">
+        <div class="panel-heading">リファレンス番号検索</div>
+        <div class="panel-body">
+            <n:form method="POST" cssClass="navbar-form">
+                <div class="form-group">
+                    <n:text id="referenceId" name="referenceId" cssClass="form-control" placeholder="Search" errorCss="has-error" />
+                </div>
+                <n:button uri="/action/login" cssClass="btn btn-primary" allowDoubleSubmission="false">Submit</n:button>
+            </n:form>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">メニュー</div>
+        <div class="panel-body nav">
+            <ul class="nav">
+                <li><n:a href="/action/project/index">プロジェクト検索</n:a></li>
+                <li><n:a href="/action/projectBulk/index">プロジェクト一括更新</n:a></li>
+                <li><n:a href="/action/projectUpload">プロジェクト一括登録</n:a></li>
+            </ul>
+        </div>
+    </div>
+
     <div class="panel panel-default">
         <ul>
             <li class="whiteripple">

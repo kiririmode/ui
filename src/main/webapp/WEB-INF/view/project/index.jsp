@@ -8,33 +8,33 @@
 <%@ page session="false" %>
 <!DOCTYPE html>
 <html>
-    <head>
+    <head lang="ja">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <%-- javascript --%>
         <n:script type="text/javascript" src="/javascripts/lib/jquery-1.11.2.min.js"></n:script>
         <n:script type="text/javascript" src="/javascripts/projectList.js"></n:script>
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
         <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <title>プロジェクト検索一覧画面</title>
     </head>
     <body>
         <n:include path="/WEB-INF/view/common/noscript.jsp" />
-        <div class="container-fluid mainContents">
-            <n:include path="/WEB-INF/view/common/menu.jsp" />
+        <div class="container">
             <n:include path="/WEB-INF/view/common/header.jsp" />
             <div class="row">
                 <n:include path="/WEB-INF/view/common/sidemenu.jsp" />
-                <div class="pages col-xs-10">
+                <div class="pages col-xs-9">
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <p>
+                                        プロジェクト検索一覧画面
+                                        <n:a href="/action/project" cssClass="btn btn-sm btn-raised btn-default pull-right">新規登録</n:a>
+                                    </p>
+                                </div>
                                 <div class="panel-body">
-                                    <div class="title-nav">
-                                        <span>プロジェクト検索一覧画面</span>
-                                        <div class="button-nav">
-                                            <n:a href="/action/project" cssClass="btn btn-raised btn-default">新規登録</n:a>
-                                        </div>
-                                    </div>
                                     <!-- 検索フォームでバリデーションエラーが発生していない場合だけ、検索結果を表示する。 -->
                                     <c:if test="${searchResult != null}">
                                         <div class="message-area margin-top">
@@ -66,12 +66,11 @@
                                             </c:url>
                                             <div class="sort-nav">
                                                 <div style="float:left;">
-                                                    <span class="font-group">
                                                     検索結果
-                                                    </span>
-                                                    <span class="search-result-count">
+                                                    <span class="label label-info">
                                                         <n:write name="searchResult.pagination.resultCount" />
                                                     </span>
+                                                    件
                                                     <c:url value="/action/project/download" var="download_uri" context="/">
                                                         <c:param name="searchForm.clientId" value="${searchForm.clientId}"/>
                                                         <c:param name="searchForm.clientName" value="${searchForm.clientName}"/>
@@ -90,7 +89,7 @@
                                                     </c:url>
                                                     <n:a href="${download_uri}">
                                                         <n:write name="label" />
-                                                        <n:img src="/images/download.png" alt="ダウンロード" />
+                                                        <span class="glyphicon glyphicon-download-alt"></span>
                                                     </n:a>
                                                 </div>
 
@@ -128,14 +127,14 @@
 
                                         <!-- 検索結果 -->
                                         <app:listSearchResult
-                                            currentPageNumberCss="form-control"
-                                            pagingCss="paging"
+                                            currentPageNumberCss="bg-info"
+                                            pagingCss="pagination"
                                             usePageNumberSubmit="true"
                                             prevSubmitLabel="«"
                                             nextSubmitLabel="»"
                                             prevSubmitCss="prev-page-link"
                                             nextSubmitCss="next-page-link"
-                                            resultSetCss="table table-striped table-hover"
+                                            resultSetCss="table table-striped table-bordered table-condensed"
                                             listSearchInfoName="searchForm"
                                             searchUri="${uri}"
                                             resultSetName="searchResult"
@@ -150,7 +149,7 @@
                                                 </tr>
                                             </jsp:attribute>
                                             <jsp:attribute name="bodyRowFragment">
-                                                <tr class="info">
+                                                <tr>
                                                     <td>
                                                         <!-- プロジェクトIDをパラメータとするリンクを表示する -->
                                                         <n:a href="/action/project/show/${row.projectId}">
@@ -177,12 +176,12 @@
                                             </jsp:attribute>
                                         </app:listSearchResult>
                                     </c:if>
-
-                                    <div class="title-nav page-footer">
-                                        <div class="button-nav">
-                                            <n:a href="/action/project" cssClass="btn btn-raised btn-default">新規登録</n:a>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                    <p>
+                                        プロジェクト検索一覧画面
+                                        <n:a href="/action/project" cssClass="btn btn-raised btn-default btn-sm pull-right">新規登録</n:a>
+                                    </p>
                                 </div>
                             </div>
                         </div>

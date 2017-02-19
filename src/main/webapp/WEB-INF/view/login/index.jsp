@@ -4,7 +4,7 @@
 <%@ page session="false" %>
 
 <!DOCTYPE html>
-<html>
+<html lang="ja">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <%-- javascript --%>
@@ -18,41 +18,41 @@
     </head>
 
     <body>
-        <div class="mainContents">
+        <div class="container">
             <n:include path="/WEB-INF/view/common/header.jsp" />
 
-            <div class="title-nav">
-                <span>ログイン</span>
+            <div class="page-header">
+                <h2>ログイン</h2>
             </div>
-            <n:form method="POST" >
-                <div class="message-area margin-top">
-                    <n:errors filter="global" cssClass="message-error"/>
-                </div>
-                <h2 class="font-group">ログイン情報</h2>
-                <div class="form-group">
-                    <label for="loginId" class="col-md-2 control-label">ログインID</label>
-                    <div class="col-md-10">
-                        <n:text id="loginId" name="loginId" cssClass="form-control" errorCss="input-error" placeholder="ログインID"/>
-                        <n:error errorCss="message-error" name="loginId" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="userPassword" class="col-md-2 control-label">パスワード</label>
-                    <div class="col-md-10">
-                        <n:password id="userPassword" name="userPassword" restoreValue="false" cssClass="form-control" placeholder="パスワード" autocomplete="off"/>
-                        <n:error errorCss="message-error" name="userPassword" />
-                    </div>
-                </div>
 
-                <div class="title-nav page-footer" >
-                    <div class="button-nav">
-                        <div class="button-block real-button-block" style="float:right">
-                            <n:button uri="/action/login" cssClass="btn btn-raised" allowDoubleSubmission="false">ログイン</n:button>
+            <div class="row">
+                <span class="col-xs-offset-2 col-xs-8">
+                    <n:form method="POST" cssClass="form-horizontal">
+                        <n:errors filter="global" cssClass="bg-danger"/>
+                        <div class="form-group">
+                            <label for="loginId" class="col-xs-2 control-label">login Id</label>
+                            <div class="col-xs-10">
+                                <n:text id="loginId" name="loginId" cssClass="form-control" placeholder="login id" errorCss="has-error" />
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </n:form>
-            <n:include path="/WEB-INF/view/common/footer.jsp" />
+                        <div class="form-group">
+                            <label for="userPassword" class="col-xs-2 control-label">Password</label>
+                            <div class="col-xs-10">
+                                <n:password id="userPassword" name="userPassword" restoreValue="false" cssClass="form-control" placeholder="パスワード" autocomplete="off" errorCss="has-error"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-offset-2 col-sm-10">
+                                <n:button uri="/action/login" cssClass="btn btn-primary" allowDoubleSubmission="false">ログイン</n:button>
+                            </div>
+                        </div>
+                    </n:form>
+                </span>
+                <span class="col-xs-2">
+                </span>
+            </div>
         </div>
+
+        <n:include path="/WEB-INF/view/common/footer.jsp" />
     </body>
 </html>

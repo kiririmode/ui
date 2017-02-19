@@ -3,11 +3,8 @@
 <%@ taglib prefix="n" uri="http://tis.co.jp/nablarch" %>
 <%@ page session="false" %>
 
-<hr />
-<table style="width: 100%;">
-    <tr style="vertical-align: bottom;">
-        <td style="margin: 5px; text-align: right;">
-            TIS株式会社
-        </td>
-    </tr>
-</table>
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">TIS 株式会社</p>
+    </div>
+</footer>
