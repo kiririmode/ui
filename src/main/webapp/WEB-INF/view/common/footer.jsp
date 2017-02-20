@@ -4,7 +4,7 @@
 <%@ page session="false" %>
 
 <footer class="footer">
-    <div class="container">
+    <div class="container-fluid">
         <p class="text-muted">TIS 株式会社</p>
     </div>
 </footer>

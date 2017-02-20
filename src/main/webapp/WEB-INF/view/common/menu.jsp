@@ -8,7 +8,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-inverse">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
                   <span class="icon-bar"></span>

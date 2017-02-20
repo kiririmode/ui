@@ -18,7 +18,7 @@
     </head>
 
     <body>
-        <div class="container">
+        <div class="container-fluid">
             <n:include path="/WEB-INF/view/common/header.jsp" />
 
             <div class="page-header">

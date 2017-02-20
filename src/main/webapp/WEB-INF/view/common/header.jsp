@@ -21,7 +21,7 @@
 <n:link rel="stylesheet" type="text/css" href="/stylesheets/common.css" />
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="navbar-header">
             <div class="navbar-brand">プロジェクト管理システム</div>
         </div>

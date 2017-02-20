@@ -14,7 +14,7 @@
 
   <body>
     <n:include path="/WEB-INF/view/common/noscript.jsp" />
-    <div class="container">
+    <div class="container-fluid">
       <n:include path="/WEB-INF/view/common/header.jsp" />
       <div class="row">
         <n:include path="/WEB-INF/view/common/sidemenu.jsp" />
