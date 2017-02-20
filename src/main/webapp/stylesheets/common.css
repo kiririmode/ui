@@ -11,21 +11,11 @@ body {
   color: #222;
   background: #FFF;
   font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', sans-serif;
-  /*
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-left: 35px;
-  margin-right: 15px;
-  */
 }
 hr {
   color: #DDDDDD;
   height: 1px;
   margin: 3px 0px 3px 0px;
-}
-
-.table {
-  width: 100%;
 }
 
 /* end ワークフロー（申請/承認状況一覧） */
