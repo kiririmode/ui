@@ -16,7 +16,7 @@
 </head>
 <body>
 	<n:include path="/WEB-INF/view/common/noscript.jsp" />
-	<div class="container-fluid">
+	<div class="container-fluid header">
 		<n:include path="/WEB-INF/view/common/header.jsp" />
 		<div class="row">
 			<n:include path="/WEB-INF/view/common/sidemenu.jsp" />

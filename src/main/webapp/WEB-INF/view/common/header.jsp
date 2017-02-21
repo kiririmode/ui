@@ -3,12 +3,12 @@
 <%@ taglib prefix="n" uri="http://tis.co.jp/nablarch" %>
 <%@ page session="false" %>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top  header">
     <div class="container-fluid">
-        <div class="navbar-header">
+        <div class="navbar-left">
             <div class="navbar-brand">プロジェクト管理システム</div>
         </div>
-        <div class="navbar-header navbar-right">
+        <div class="navbar-right pull-right">
             <c:if test="${ !empty userContext }">
                 <span class="navbar-text"><n:write name="userContext.kanjiName" /></span>
                 <n:a href="/action/logout" cssClass="btn btn-default navbar-btn">ログアウト</n:a>

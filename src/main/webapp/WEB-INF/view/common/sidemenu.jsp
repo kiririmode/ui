@@ -5,7 +5,7 @@
 <%@ taglib prefix="n" uri="http://tis.co.jp/nablarch"%>
 <%@ page session="false"%>
 <n:script type="text/javascript" src="/javascripts/sideMenu.js"></n:script>
-<nav class="col-xs-3 navbar navbar-default">
+<nav class="col-xs-3 navbar-default sidemenu">
 	<div class="panel panel-default">
 		<div class="panel-heading">リファレンス番号検索</div>
 		<div class="panel-body">
@@ -13,7 +13,7 @@
 				<label for="referenceId" class="control-label">リファレンス番号</label>
 				<div class="form-inline">
 					<n:text id="referenceId" name="referenceId" cssClass="form-control"
-						placeholder="reference no." errorCss="has-error" size="10" />
+						placeholder="reference no." errorCss="has-error" size="8" />
 					<n:button uri="/action/login" cssClass="btn btn-primary"
 						allowDoubleSubmission="false">Submit</n:button>
 				</div>
