@@ -113,9 +113,9 @@
 											<td>
 												<div class="form-group">
 													<n:text name="form.clientId" maxlength="10" readonly="true"
-														cssClass="form-control input-label" tabindex="-1" />
+														cssClass="form-control" tabindex="-1" />
 													<n:text name="form.clientName" maxlength="64"
-														readonly="true" cssClass="form-control  input-label"
+														readonly="true" cssClass="form-control"
 														tabindex="-1" />
 												</div> <n:forInputPage>
 													<n:a href="/action/client/index" id="client_pop">
@@ -164,7 +164,7 @@
 											<td><n:forInputPage>
 													<div class="form-group">
 														<n:text name="form.sales" maxlength="9"
-															cssClass="form-control width-200" errorCss="input-error"
+															cssClass="form-control" errorCss="input-error"
 															style="float:left;" />
 														<div
 															style="display: table-cell; height: 30px; vertical-align: bottom;">千円</div>
@@ -182,7 +182,7 @@
 											<td><n:forInputPage>
 													<div class="form-group">
 														<n:text name="form.costOfGoodsSold" maxlength="9"
-															cssClass="form-control width-200" errorCss="input-error"
+															cssClass="form-control" errorCss="input-error"
 															style="float:left;" />
 														<div
 															style="display: table-cell; height: 30px; vertical-align: bottom;">千円</div>
@@ -200,7 +200,7 @@
 											<td><n:forInputPage>
 													<div class="form-group">
 														<n:text name="form.sga" maxlength="9"
-															cssClass="form-control width-200" errorCss="input-error"
+															cssClass="form-control" errorCss="input-error"
 															style="float:left;" />
 														<div
 															style="display: table-cell; height: 30px; vertical-align: bottom;">千円</div>
@@ -218,7 +218,7 @@
 											<td><n:forInputPage>
 													<div class="form-group">
 														<n:text name="form.allocationOfCorpExpenses" maxlength="9"
-															cssClass="form-control width-200" errorCss="input-error"
+															cssClass="form-control" errorCss="input-error"
 															style="float:left;" />
 														<div
 															style="display: table-cell; height: 30px; vertical-align: bottom;">千円</div>

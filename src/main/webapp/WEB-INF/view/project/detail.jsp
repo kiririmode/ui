@@ -39,7 +39,7 @@
 									<table class="table table-striped table-hover table-bordered">
 										<tbody>
 											<tr>
-												<th class="width-250">プロジェクト名</th>
+												<th>プロジェクト名</th>
 												<td><n:write name="form.projectName" /></td>
 											</tr>
 											<tr>

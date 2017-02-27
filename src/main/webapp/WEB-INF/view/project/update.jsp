@@ -56,11 +56,11 @@
 									class="table table-striped table-bordered table-condensed">
 									<tbody>
 										<tr>
-											<th class="width-250 required">プロジェクト名</th>
+											<th class="required">プロジェクト名</th>
 											<td>
 												<div class="form-group">
 													<n:text name="form.projectName" maxlength="64"
-														cssClass="form-control width-300" errorCss="input-error" />
+														cssClass="form-control" errorCss="input-error" />
 													<n:error errorCss="message-error" name="form.projectName" />
 												</div>
 											</td>
@@ -98,7 +98,7 @@
 											<td>
 												<div class="form-group">
 													<n:text name="form.projectManager" maxlength="64"
-														cssClass="form-control width-300" errorCss="input-error" />
+														cssClass="form-control" errorCss="input-error" />
 													<n:error errorCss="message-error"
 														name="form.projectManager" />
 												</div>
@@ -109,7 +109,7 @@
 											<td>
 												<div class="form-group">
 													<n:text name="form.projectLeader" maxlength="64"
-														cssClass="form-control width-300" errorCss="input-error" />
+														cssClass="form-control" errorCss="input-error" />
 													<n:error errorCss="message-error" name="form.projectLeader" />
 												</div>
 											</td>
@@ -172,7 +172,7 @@
 											<td><n:forInputPage>
 													<div class="form-group">
 														<n:text name="form.sales" maxlength="9"
-															cssClass="form-control width-200" errorCss="input-error"
+															cssClass="form-control" errorCss="input-error"
 															style="float:left" />
 														<div
 															style="display: table-cell; height: 30px; vertical-align: bottom;">千円</div>
@@ -190,7 +190,7 @@
 											<td><n:forInputPage>
 													<div class="form-group">
 														<n:text name="form.costOfGoodsSold" maxlength="9"
-															cssClass="form-control width-200" errorCss="input-error"
+															cssClass="form-control" errorCss="input-error"
 															style="float:left" />
 														<div
 															style="display: table-cell; height: 30px; vertical-align: bottom;">千円</div>
@@ -209,7 +209,7 @@
 											<td><n:forInputPage>
 													<div class="form-group">
 														<n:text name="form.sga" maxlength="9"
-															cssClass="form-control width-200" errorCss="input-error"
+															cssClass="form-control" errorCss="input-error"
 															style="float:left" />
 														<div
 															style="display: table-cell; height: 30px; vertical-align: bottom;">千円</div>
@@ -227,7 +227,7 @@
 											<td><n:forInputPage>
 													<div class="form-group">
 														<n:text name="form.allocationOfCorpExpenses" maxlength="9"
-															cssClass="form-control width-200" errorCss="input-error"
+															cssClass="form-control" errorCss="input-error"
 															style="float:left" />
 														<div
 															style="display: table-cell; height: 30px; vertical-align: bottom;">千円</div>
