@@ -89,10 +89,11 @@ select:-webkit-autofill:focus {
     display: block;
 }
 
-.navbar {
-    min-width: 360px;
-}
-
 .navbar-brand {
     margin-left: -15px;
+}
+
+/* ヘッダにログアウトボタンを配置する際のマージン */
+navbar .btn-logout {
+    margin: 10px 10px;
 }
