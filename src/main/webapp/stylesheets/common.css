@@ -89,10 +89,6 @@ select:-webkit-autofill:focus {
     display: block;
 }
 
-.sidemenu {
-    min-width: 320px;
-}
-
 .navbar {
     min-width: 360px;
 }
