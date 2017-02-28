@@ -8,17 +8,20 @@
 		<div class="navbar-left">
 			<div class="navbar-brand">プロジェクト管理システム</div>
 		</div>
-		<n:form method="GET">
-			<ul class="nav navbar-nav navbar-right">
-				<c:if test="${ !empty userContext }">
-					<li><p class="navbar-text"><n:write name="userContext.kanjiName" /></p></li>
-					<li><p class="navbar-text last-login">前回ログイン: <br />2017/06/05 23:23:23</p>
-					<li><n:button uri="/action/logout" cssClass="btn btn-default navbar-btn btn-logout">ログアウト</n:button></li>
-				</c:if>
-				<c:if test="${ empty userContext }">
-					<n:a href="/action/login" cssClass="navbar-text">ログイン</n:a>
-				</c:if>
-			</ul>
-		</n:form>
+		<ul class="nav navbar-nav navbar-right">
+			<c:if test="${ !empty userContext }">
+				<li><p class="navbar-text">
+						<n:write name="userContext.kanjiName" />
+					</p></li>
+				<li><p class="navbar-text last-login">
+						前回ログイン: <br />2017/06/05 23:23:23
+					</p>
+				<li><n:a href="/action/logout"
+						cssClass="btn btn-default navbar-btn btn-logout">ログアウト</n:a></li>
+			</c:if>
+			<c:if test="${ empty userContext }">
+				<n:a href="/action/login" cssClass="navbar-text">ログイン</n:a>
+			</c:if>
+		</ul>
 	</div>
 </nav>

@@ -96,6 +96,8 @@ select:-webkit-autofill:focus {
 /* ヘッダにログアウトボタンを配置する際のマージン */
 .navbar .btn-logout {
     margin: 10px 10px;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
 }
 
 /* ヘッダ上の最終ログイン日時 */
