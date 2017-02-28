@@ -97,3 +97,9 @@ select:-webkit-autofill:focus {
 .navbar .btn-logout {
     margin: 10px 10px;
 }
+
+/* ヘッダ上の最終ログイン日時 */
+.navbar .last-login {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}

@@ -12,7 +12,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<c:if test="${ !empty userContext }">
 					<li><p class="navbar-text"><n:write name="userContext.kanjiName" /></p></li>
-					<li><p class="navbar-text">前回ログイン: 2017/06/05 23:23:23</p>
+					<li><p class="navbar-text last-login">前回ログイン: <br />2017/06/05 23:23:23</p>
 					<li><n:button uri="/action/logout" cssClass="btn btn-default navbar-btn btn-logout">ログアウト</n:button></li>
 				</c:if>
 				<c:if test="${ empty userContext }">
