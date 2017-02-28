@@ -11,10 +11,8 @@
 			<n:form method="POST">
 				<label for="referenceId" class="control-label">リファレンス番号</label>
 				<div class="form-inline">
-					<n:text id="referenceId" name="referenceId" cssClass="form-control"
-						placeholder="reference no." errorCss="has-error" size="8" />
-					<n:button uri="/action/login" cssClass="btn btn-primary"
-						allowDoubleSubmission="false">Submit</n:button>
+					<n:text id="referenceId" name="referenceId" cssClass="form-control" placeholder="reference no." errorCss="has-error" size="8" />
+					<n:button uri="/action/login" cssClass="btn btn-primary" allowDoubleSubmission="false">検索</n:button>
 				</div>
 			</n:form>
 		</div>
