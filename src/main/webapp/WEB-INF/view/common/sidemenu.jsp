@@ -5,7 +5,7 @@
 <%@ taglib prefix="n" uri="http://tis.co.jp/nablarch"%>
 <%@ page session="false"%>
 <nav class="col-xs-3 navbar-default">
-	<div class="panel panel-default">
+	<div class="panel panel-default panel-reference">
 		<div class="panel-heading">リファレンス番号検索</div>
 		<div class="panel-body">
 			<n:form method="POST">
@@ -14,7 +14,7 @@
 					<div class="form-group">
 						<n:text id="referenceId" name="referenceId" cssClass="form-control" placeholder="ref. no" errorCss="has-error" size="10" />
 					</div>
-					<n:button uri="/action/login" cssClass="btn btn-primary" allowDoubleSubmission="false">検索</n:button>
+					<n:button uri="/action/login" cssClass="btn btn-sm btn-primary" allowDoubleSubmission="false">検索</n:button>
 				</div>
 			</n:form>
 		</div>
