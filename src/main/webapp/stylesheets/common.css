@@ -1,9 +1,9 @@
 ﻿@charset "UTF-8";
 body {
-  padding-top: 70px;
-  color: #222;
-  background: #FFF;
-  font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', sans-serif !important;
+    padding-top: 70px;
+    color: #222;
+    background: #FFF;
+    font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', sans-serif !important;
 }
 
 /* ----- 入力エラー ----- */
@@ -20,12 +20,12 @@ body {
 }
 
 .title-nav span {
-  position: absolute;
-  font-size: 18px;
-  font-weight: bold;
-  padding-left: 10px;
-  margin-top: 15px;
-  color: white;
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 10px;
+    margin-top: 15px;
+    color: white;
 }
 
 .noscriptMessage {
@@ -60,15 +60,15 @@ body {
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus
-input:-webkit-autofill,
+                           input:-webkit-autofill,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus,
+                              textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px white inset;
-  transition: background-color 5000s ease-in-out 0s;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 .footer {
@@ -88,9 +88,9 @@ select:-webkit-autofill:focus {
 }
 
 .navbar {
-  min-width: 360px;
+    min-width: 360px;
 }
 
 .navbar-brand {
-  margin-left: -15px;
+    margin-left: -15px;
 }
