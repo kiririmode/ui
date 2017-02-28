@@ -7,4 +7,6 @@
 
 <n:link rel="stylesheet" type="text/css" href="/stylesheets/common.css" />
 <n:link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css" />
+<!--
 <n:link rel="stylesheet" type="text/css" href="http://getbootstrap.com/examples/non-responsive/non-responsive.css" />
+ -->

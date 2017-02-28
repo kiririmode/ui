@@ -5,7 +5,7 @@
 <%@ taglib prefix="n" uri="http://tis.co.jp/nablarch"%>
 <%@ page session="false"%>
 <n:script type="text/javascript" src="/javascripts/sideMenu.js"></n:script>
-<nav class="col-xs-3 navbar-default sidemenu">
+<nav class="col-xs-3 navbar-default">
 	<div class="panel panel-default">
 		<div class="panel-heading">リファレンス番号検索</div>
 		<div class="panel-body">

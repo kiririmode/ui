@@ -78,8 +78,14 @@ select:-webkit-autofill:focus {
     background-color: #f5f5f5;
 }
 
+/* 社員 WEB 全体の横幅 */
+.whole-width {
+    min-width: 1200px !important;
+    display: block;
+}
+
 .header {
-    min-width: 1280px !important;
+    min-width: 1200px !important;
     display: block;
 }
 
