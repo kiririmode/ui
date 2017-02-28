@@ -50,7 +50,7 @@
 					</div>
 					<div class="form-group">
 						<div class="col-xs-offset-2 col-sm-10">
-							<n:button uri="/action/login" cssClass="btn btn-primary"
+							<n:button uri="/action/login" cssClass="btn btn-primary form-control"
 								allowDoubleSubmission="false">ログイン</n:button>
 						</div>
 					</div>
