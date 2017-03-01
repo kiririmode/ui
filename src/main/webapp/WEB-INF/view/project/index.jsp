@@ -14,9 +14,9 @@
 <n:include path="/WEB-INF/view/common/head.jsp" />
 <title>プロジェクト検索一覧画面</title>
 </head>
-<body>
+<body class="whole-width">
 	<n:include path="/WEB-INF/view/common/noscript.jsp" />
-	<div class="container-fluid whole-width">
+	<div class="container-fluid">
 		<n:include path="/WEB-INF/view/common/header.jsp" />
 		<div class="row">
 			<n:include path="/WEB-INF/view/common/sidemenu.jsp" />
@@ -51,12 +51,11 @@
 														</p>
 														<c:forEach var="projectClass"
 															items="<%=ProjectClass.values()%>">
-															<div class="checkbox-inline">
-																<label> <n:checkbox
+															<div class="radio-inline">
+																<n:radioButton
 																		name="searchForm.projectClass"
-																		value="${projectClass.code}" /> <n:write
-																		name="projectClass.label" />
-																</label>
+																		value="${projectClass.code}" label="${projectClass.label}" disabled="true"/>
+
 															</div>
 														</c:forEach>
 													</div>

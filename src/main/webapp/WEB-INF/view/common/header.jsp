@@ -3,7 +3,7 @@
 <%@ taglib prefix="n" uri="http://tis.co.jp/nablarch"%>
 <%@ page session="false"%>
 
-<nav class="navbar navbar-inverse navbar-fixed-top whole-width">
+<nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-left">
 			<div class="navbar-brand">プロジェクト管理システム</div>

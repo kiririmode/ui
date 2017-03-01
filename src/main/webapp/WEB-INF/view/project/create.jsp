@@ -20,17 +20,18 @@
 			<n:include path="/WEB-INF/view/common/sidemenu.jsp" />
 			<div class="pages col-xs-9">
 				<div class="row">
-					<n:form useToken="true">
+					<n:form useToken="true" method="POST">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<p>
+
 									<n:forInputPage>
                         プロジェクト登録画面
                         <span class="pull-right"> <n:button
 												id="topBackLink" uri="#"
 												cssClass="btn btn-raised btn-default btn-sm">戻る</n:button> <n:button
-												uri="/action/project/confirmOfCreate"
-												cssClass="btn btn-raised btn-success btn-sm">登録</n:button>
+												uri="/actionaa/project/confirmOfCreate"
+												cssClass="btn btn-primary btn-sm" displayMethod="DISABLED">更新</n:button>
 										</span>
 									</n:forInputPage>
 									<n:forConfirmationPage>
@@ -46,6 +47,12 @@
 								</p>
 							</div>
 							<div class="panel-body">
+							<!--
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <n:file name="exampleInputFile" id="exampleInputFile" />
+  </div>
+ -->
 								<n:errors filter="global" cssClass="bg-danger" />
 								<table
 									class="table table-striped table-bordered table-condensed">
@@ -55,8 +62,8 @@
 											<td>
 												<div class="form-group">
 													<n:text name="form.projectName" maxlength="64"
-														cssClass="form-control" errorCss="input-error" />
-													<n:error errorCss="bg-danger" name="form.projectName" />
+														cssClass="form-control" errorCss="has-error" />
+													<n:error errorCss="text-danger" name="form.projectName" />
 												</div>
 											</td>
 										</tr>
@@ -66,11 +73,9 @@
 												<div class="form-group">
 													<n:set var="projectTypeList"
 														value="<%= ProjectType.values() %>" />
-													<n:select name="form.projectType"
-														listName="projectTypeList" elementValueProperty="code"
-														elementLabelProperty="label" elementLabelPattern="$LABEL$"
-														cssClass="form-control" />
-													<n:error errorCss="bg-danger" name="form.projectType" />
+													<n:select name="form.projectType" listName="projectTypeList" elementValueProperty="code" elementLabelProperty="label" elementLabelPattern="$LABEL$" cssClass="form-control" />
+													<n:error errorCss="text-danger" name="form.projectType" />
+													<span class="help-block"><small>SS: 10億円以上、S: 1億円以上</small></span>
 												</div>
 											</td>
 										</tr>
@@ -83,8 +88,8 @@
 													<n:select name="form.projectClass"
 														listName="projectClassList" elementValueProperty="code"
 														elementLabelProperty="label" elementLabelPattern="$LABEL$"
-														cssClass="form-control" />
-													<n:error errorCss="bg-danger" name="form.projectClass" />
+														cssClass="form-control" disabled="true"/>
+													<n:error errorCss="text-danger" name="form.projectClass" />
 												</div>
 											</td>
 										</tr>
@@ -93,8 +98,8 @@
 											<td>
 												<div class="form-group">
 													<n:text name="form.projectManager" maxlength="64"
-														cssClass="form-control " errorCss="input-error" />
-													<n:error errorCss="bg-danger" name="form.projectManager" />
+														cssClass="form-control " errorCss="input-error" disabled="" />
+													<n:error errorCss="text-danger" name="form.projectManager" />
 												</div>
 											</td>
 										</tr>
@@ -104,7 +109,7 @@
 												<div class="form-group">
 													<n:text name="form.projectLeader" maxlength="64"
 														cssClass="form-control " errorCss="input-error" />
-													<n:error errorCss="bg-danger" name="form.projectLeader" />
+													<n:error errorCss="text-danger" name="form.projectLeader" />
 												</div>
 											</td>
 										</tr>
@@ -121,18 +126,19 @@
 													<n:a href="/action/client/index" id="client_pop">
 														<span class="glyphicon glyphicon-search" />
 													</n:a>
-												</n:forInputPage> <n:error errorCss="bg-danger" name="form.clientId" /> <n:error
-													errorCss="bg-danger" name="form.clientName" />
+												</n:forInputPage> <n:error errorCss="text-danger" name="form.clientId" /> <n:error
+													errorCss="text-danger" name="form.clientName" />
 											</td>
 										</tr>
 										<tr>
 											<th>プロジェクト開始日</th>
 											<td>
-												<div class="form-group">
+												<div class="form-group has-feedback">
 													<n:text name="form.projectStartDate" nameAlias="form.date"
 														valueFormat="exampleDateTime{yyyy/MM/dd}"
 														cssClass="form-control datepicker" errorCss="input-error" />
-													<n:error errorCss="bg-danger" name="form.projectStartDate" />
+													<span class="glyphicon glyphicon-calendar form-control-feedback"></span>
+													<n:error errorCss="text-danger" name="form.projectStartDate" />
 												</div>
 											</td>
 										</tr>
@@ -143,8 +149,8 @@
 													<n:text name="form.projectEndDate" nameAlias="form.date"
 														valueFormat="exampleDateTime{yyyy/MM/dd}"
 														cssClass="form-control datepicker" errorCss="input-error" />
-													<n:error errorCss="bg-danger" name="form.projectEndDate" />
-													<n:error errorCss="bg-danger"
+													<n:error errorCss="text-danger" name="form.projectEndDate" />
+													<n:error errorCss="text-danger"
 														name="form.validProjectPeriod" />
 												</div>
 											</td>
@@ -155,7 +161,7 @@
 												<div class="form-group">
 													<n:textarea rows="5" cols="50" name="form.note"
 														cssClass="form-control" errorCss="input-error" />
-													<n:error errorCss="bg-danger" name="form.note" />
+													<n:error errorCss="text-danger" name="form.note" />
 												</div>
 											</td>
 										</tr>
@@ -169,7 +175,7 @@
 														<div
 															style="display: table-cell; height: 30px; vertical-align: bottom;">千円</div>
 														<div style="clear: left;">
-															<n:error errorCss="bg-danger" name="form.sales" />
+															<n:error errorCss="text-danger" name="form.sales" />
 														</div>
 													</div>
 												</n:forInputPage> <n:forConfirmationPage>
@@ -187,7 +193,7 @@
 														<div
 															style="display: table-cell; height: 30px; vertical-align: bottom;">千円</div>
 														<div style="clear: left;">
-															<n:error errorCss="bg-danger" name="form.costOfGoodsSold" />
+															<n:error errorCss="text-danger" name="form.costOfGoodsSold" />
 														</div>
 													</div>
 												</n:forInputPage> <n:forConfirmationPage>
@@ -205,7 +211,7 @@
 														<div
 															style="display: table-cell; height: 30px; vertical-align: bottom;">千円</div>
 														<div style="clear: left;">
-															<n:error errorCss="bg-danger" name="form.sga" />
+															<n:error errorCss="text-danger" name="form.sga" />
 														</div>
 													</div>
 												</n:forInputPage> <n:forConfirmationPage>
@@ -223,7 +229,7 @@
 														<div
 															style="display: table-cell; height: 30px; vertical-align: bottom;">千円</div>
 														<div style="clear: left;">
-															<n:error errorCss="bg-danger"
+															<n:error errorCss="text-danger"
 																name="form.allocationOfCorpExpenses" />
 														</div>
 													</div>
@@ -237,33 +243,33 @@
 												<td>売上総利益</td>
 												<td><n:write name="form.grossProfit"
 														valueFormat="decimal{###,###,### 千円}" /> <n:error
-														errorCss="bg-danger" name="form.grossProfit" /></td>
+														errorCss="text-danger" name="form.grossProfit" /></td>
 											</tr>
 											<tr>
 												<td>配賦前利益</td>
 												<td><n:write name="form.profitBeforeAllocation"
 														valueFormat="decimal{###,###,### 千円}" /> <n:error
-														errorCss="bg-danger" name="form.profitBeforeAllocation" />
+														errorCss="text-danger" name="form.profitBeforeAllocation" />
 												</td>
 											</tr>
 											<tr>
 												<td>配賦前利益率</td>
 												<td><n:write name="form.profitRateBeforeAllocation"
 														valueFormat="decimal{##0.0 %}" /> <n:error
-														errorCss="bg-danger"
+														errorCss="text-danger"
 														name="form.profitRateBeforeAllocation" /></td>
 											</tr>
 											<tr>
 												<td>営業利益</td>
 												<td><n:write name="form.operatingProfit"
 														valueFormat="decimal{###,###,### 千円}" /> <n:error
-														errorCss="bg-danger" name="form.operatingProfit" /></td>
+														errorCss="text-danger" name="form.operatingProfit" /></td>
 											</tr>
 											<tr>
 												<td>営業利益率</td>
 												<td><n:write name="form.operatingProfitRate"
 														valueFormat="decimal{##0.0 %}" /> <n:error
-														errorCss="bg-danger" name="form.operatingProfitRate" /></td>
+														errorCss="text-danger" name="form.operatingProfitRate" /></td>
 											</tr>
 										</n:forConfirmationPage>
 									</tbody>
